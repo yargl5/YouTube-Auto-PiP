@@ -1,0 +1,24 @@
+{
+  "manifest_version": 3,
+  "name": "YouTube Auto PiP",
+  "description": "Автоматический Picture-in-Picture для YouTube с возвратом видео в плеер.",
+  "version": "1.0.9",
+  "minimum_chrome_version": "134",
+  "permissions": ["storage", "activeTab", "scripting", "tabs"],
+  "host_permissions": ["https://www.youtube.com/*", "https://m.youtube.com/*"],
+  "background": { "service_worker": "background.js" },
+  "action": { "default_title": "YouTube Auto PiP", "default_popup": "popup.html" },
+  "content_scripts": [
+    {
+      "matches": ["https://www.youtube.com/*", "https://m.youtube.com/*"],
+      "js": ["main.js"],
+      "run_at": "document_start",
+      "world": "MAIN"
+    },
+    {
+      "matches": ["https://www.youtube.com/*", "https://m.youtube.com/*"],
+      "js": ["bridge.js"],
+      "run_at": "document_start"
+    }
+  ]
+}

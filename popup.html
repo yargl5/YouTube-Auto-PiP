@@ -1,0 +1,7 @@
+<!doctype html>
+<html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>YouTube Auto PiP</title><link rel="stylesheet" href="popup.css"></head>
+<body><main><header><span class="logo">▶</span><div><h1>YouTube Auto PiP</h1><p>Document PiP · 1.0.8</p></div></header>
+<label class="option"><span><strong>Автоматический PiP</strong><small>Без внутреннего PiP-режима YouTube</small></span><input id="enabled" type="checkbox"><span class="switch"></span></label>
+<button id="openNow" class="primary" type="button">Открыть обычный PiP вручную</button><p id="actionStatus" class="status"></p>
+<section class="diagnostics"><div class="title"><strong>Журнал</strong><span id="logCount">0 записей</span></div><textarea id="logs" readonly spellcheck="false"></textarea><div class="buttons"><button id="clearLogs">Очистить</button><button id="refreshLogs">Обновить</button><button id="copyLogs" class="primary">Скопировать</button></div><p id="logStatus" class="status"></p></section>
+</main><script src="popup.js"></script></body></html>
